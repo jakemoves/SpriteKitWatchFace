@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88D2ABEC2176507A00BE479A /* ModernWomanScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D2ABEB2176507A00BE479A /* ModernWomanScene.swift */; };
+		88DC229721757E7B00C5A179 /* ModernWomanScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 88DC229621757E7B00C5A179 /* ModernWomanScene.sks */; };
 		B0D30AD5216D5B2500444765 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D30AD4216D5B2500444765 /* AppDelegate.m */; };
 		B0D30AD8216D5B2500444765 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D30AD7216D5B2500444765 /* ViewController.m */; };
 		B0D30ADB216D5B2500444765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D30AD9216D5B2500444765 /* Main.storyboard */; };
@@ -75,6 +77,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		88D2ABEB2176507A00BE479A /* ModernWomanScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernWomanScene.swift; sourceTree = "<group>"; };
+		88D2ABED2176540F00BE479A /* SpriteKitWatchFace WatchKit Extension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpriteKitWatchFace WatchKit Extension-Bridging-Header.h"; sourceTree = "<group>"; };
+		88DC229621757E7B00C5A179 /* ModernWomanScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ModernWomanScene.sks; sourceTree = "<group>"; };
 		B0D30AD0216D5B2500444765 /* SpriteKitWatchFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitWatchFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D30AD3216D5B2500444765 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B0D30AD4216D5B2500444765 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -198,6 +203,9 @@
 				B0D30B13216D5C6A00444765 /* FaceScene.sks */,
 				B0D30B00216D5B2800444765 /* Assets.xcassets */,
 				B0D30B02216D5B2800444765 /* Info.plist */,
+				88DC229621757E7B00C5A179 /* ModernWomanScene.sks */,
+				88D2ABEB2176507A00BE479A /* ModernWomanScene.swift */,
+				88D2ABED2176540F00BE479A /* SpriteKitWatchFace WatchKit Extension-Bridging-Header.h */,
 			);
 			path = "SpriteKitWatchFace WatchKit Extension";
 			sourceTree = "<group>";
@@ -301,7 +309,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "Steven Troughton-Smith";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					B0D30ACF216D5B2500444765 = {
 						CreatedOnToolsVersion = 10.0;
@@ -311,6 +319,7 @@
 					};
 					B0D30AF4216D5B2700444765 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					B0EB72E7216E69AA0098CF27 = {
 						CreatedOnToolsVersion = 10.0;
@@ -362,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88DC229721757E7B00C5A179 /* ModernWomanScene.sks in Resources */,
 				B0D30B01216D5B2800444765 /* Assets.xcassets in Resources */,
 				B0D30B14216D5C6A00444765 /* FaceScene.sks in Resources */,
 			);
@@ -454,6 +464,7 @@
 			files = (
 				B0D30AFF216D5B2700444765 /* ExtensionDelegate.m in Sources */,
 				B0EB7307216E6C380098CF27 /* FaceScene.m in Sources */,
+				88D2ABEC2176507A00BE479A /* ModernWomanScene.swift in Sources */,
 				B0D30AFC216D5B2700444765 /* InterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,18 +647,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZDN69KUUV;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = J93D25NHHG;
 				INFOPLIST_FILE = "SpriteKitWatchFace WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.SpriteKitWatchFace.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.cohort.watch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpriteKitWatchFace WatchKit Extension/SpriteKitWatchFace WatchKit Extension-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -657,18 +673,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZDN69KUUV;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = J93D25NHHG;
 				INFOPLIST_FILE = "SpriteKitWatchFace WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.SpriteKitWatchFace.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.cohort.watch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SpriteKitWatchFace WatchKit Extension/SpriteKitWatchFace WatchKit Extension-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.3;
 			};
@@ -677,12 +697,13 @@
 		B0D30B0A216D5B2800444765 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZDN69KUUV;
+				DEVELOPMENT_TEAM = J93D25NHHG;
 				IBSC_MODULE = SpriteKitWatchFace_WatchKit_Extension;
 				INFOPLIST_FILE = "SpriteKitWatchFace WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.SpriteKitWatchFace.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.cohort.watch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = NO;
@@ -694,12 +715,13 @@
 		B0D30B0B216D5B2800444765 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZDN69KUUV;
+				DEVELOPMENT_TEAM = J93D25NHHG;
 				IBSC_MODULE = SpriteKitWatchFace_WatchKit_Extension;
 				INFOPLIST_FILE = "SpriteKitWatchFace WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.SpriteKitWatchFace.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.cohort.watch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = NO;
@@ -713,13 +735,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZDN69KUUV;
+				DEVELOPMENT_TEAM = J93D25NHHG;
 				INFOPLIST_FILE = SpriteKitWatchFace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.SpriteKitWatchFace;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.cohort.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -730,13 +752,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ZDN69KUUV;
+				DEVELOPMENT_TEAM = J93D25NHHG;
 				INFOPLIST_FILE = SpriteKitWatchFace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.SpriteKitWatchFace;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.cohort.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -750,14 +772,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2ZDN69KUUV;
+				DEVELOPMENT_TEAM = J93D25NHHG;
 				INFOPLIST_FILE = DesktopShim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.SKWFDesktopShim;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.cohort.watch.SKWFDesktopShim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -771,14 +793,14 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2ZDN69KUUV;
+				DEVELOPMENT_TEAM = J93D25NHHG;
 				INFOPLIST_FILE = DesktopShim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				PRODUCT_BUNDLE_IDENTIFIER = com.highcaffeinecontent.SKWFDesktopShim;
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.cohort.watch.SKWFDesktopShim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

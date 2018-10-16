@@ -19,14 +19,18 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>97</string>
+	<string>118</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SFCompactText-Regular.otf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.highcaffeinecontent.SpriteKitWatchFace</string>
+	<string>rocks.cohort.watch</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

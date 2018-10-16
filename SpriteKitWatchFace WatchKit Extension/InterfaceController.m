@@ -8,6 +8,7 @@
 
 #import "InterfaceController.h"
 #import "FaceScene.h"
+#import "SpriteKitWatchFace_WatchKit_Extension-Swift.h"
 
 @import ObjectiveC.runtime;
 @import SpriteKit;
@@ -28,10 +29,13 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
 	
-	[[NSUserDefaults standardUserDefaults] registerDefaults:@{@"Theme":@(ThemeMarques)}];
+//    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"Theme":@(ThemeMarques)}];
 
-	FaceScene *scene = [FaceScene nodeWithFileNamed:@"FaceScene"];
-	
+//    FaceScene *scene = [FaceScene nodeWithFileNamed:@"FaceScene"];
+    ModernWomanScene *scene = [SKScene nodeWithFileNamed:@"ModernWomanScene" securelyWithClasses:nil andError:nil];
+    
+    [scene setup];
+    
 	CGSize currentDeviceSize = [WKInterfaceDevice currentDevice].screenBounds.size;
 	
 	/* Using the 44mm Apple Watch as the base size, scale down to fit */
