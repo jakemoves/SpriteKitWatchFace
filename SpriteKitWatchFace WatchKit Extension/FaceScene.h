@@ -41,15 +41,62 @@ typedef enum : NSUInteger {
 typedef enum : NSUInteger {
 	NumeralStyleAll,
 	NumeralStyleCardinal,
-	NumeralStyleNone
+	NumeralStyleNone,
+	NumeralStyleMAX
 } NumeralStyle;
 
 typedef enum : NSUInteger {
 	TickmarkStyleAll,
 	TickmarkStyleMajor,
 	TickmarkStyleMinor,
-	TickmarkStyleNone
+	TickmarkStyleStackMajor,
+	TickmarkStyleNone,
+	TickmarkStyleMAX
 } TickmarkStyle;
+
+typedef enum : NSUInteger {
+	FaceStyleRound,
+	FaceStyleRectangular,
+	FaceStyleMAX
+} FaceStyle;
+
+typedef enum : NSUInteger {
+	ColorRegionStyleNone,
+	ColorRegionStyleDynamicDuo,
+	ColorRegionStyleHalf,
+	ColorRegionStyleCircle,
+	ColorRegionStyleRing,
+	ColorRegionStyleMAX
+} ColorRegionStyle;
+
+typedef enum : NSUInteger {
+	TickmarkShapeRectangular,
+	TickmarkShapeCircular,
+	TickmarkShapeTriangular,
+	TickmarkShapeMAX
+} TickmarkShape;
+
+typedef enum : NSUInteger {
+	DateStyleNone,
+	DateStyleDay,
+	DateStyleDate,
+	DateStyleDayDate,
+	DateStyleMAX
+} DateStyle;
+
+typedef enum : NSUInteger {
+	DateQuadrantRight,
+	DateQuadrantBottom,
+	DateQuadrantLeft,
+	DateQuadrantTop,
+	DateQuadrantMAX
+} DateQuadrant;
+
+typedef enum : NSUInteger {
+	CenterDiscStyleNone,
+	CenterDiscStyleEnabled,
+	CenterDiscStyleMAX,
+} CenterDiscStyle;
 
 @interface FaceScene : SKScene <SKSceneDelegate>
 
@@ -58,6 +105,13 @@ typedef enum : NSUInteger {
 @property Theme theme;
 @property NumeralStyle numeralStyle;
 @property TickmarkStyle tickmarkStyle;
+@property TickmarkShape majorTickmarkShape;
+@property TickmarkShape minorTickmarkShape;
+@property FaceStyle faceStyle;
+@property ColorRegionStyle colorRegionStyle;
+@property DateStyle dateStyle;
+@property DateQuadrant dateQuadrant;
+@property CenterDiscStyle centerDiscStyle;
 
 @property SKColor *colorRegionColor;
 @property SKColor *faceBackgroundColor;
@@ -73,12 +127,14 @@ typedef enum : NSUInteger {
 @property SKColor *alternateMinorMarkColor;
 @property SKColor *alternateTextColor;
 
-@property BOOL useProgrammaticLayout;
-@property BOOL useRoundFace;
+@property BOOL useBackgroundImageOverlay;
 @property BOOL useMasking;
-@property BOOL showDate;
 
 @property CGSize faceSize;
+
+@property CGFloat majorTickHeight;
+@property CGFloat majorTickWidth;
+@property CGFloat minorTickHeight;
 
 @end
 
